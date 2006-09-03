@@ -1,0 +1,32 @@
+Before Install
+
+you should installed the Win32::API Module, if not you can install by ppm, in the console mode
+type command:  
+
+ppm install http://www.bribes.org/perl/ppm/Win32-API.ppd
+
+
+
+INSTALL
+
+To install this module you do the following:
+
+perl Makefile.PL
+make
+make test
+make install
+
+
+
+AUTHOR
+
+Lilo Huang
+kenwu@cpan.org
+http://blog.yam.com/kenwu/
+
+
+
+COPYRIGHT
+
+Copyright 2006 by Lilo Huang All Rights Reserved.
+You can use this module under the same terms as Perl itself.
