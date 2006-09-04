@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use vars qw($VERSION $self $mciSendString $result);
 use Win32::API;
-$VERSION = '0.1';
+$VERSION = '0.2';
 
 BEGIN {
 $mciSendString = new Win32::API(
@@ -130,7 +130,7 @@ sub doMM {
 
 =head1 NAME
 
-Win32::MediaPlayer - Module for playing sound *.mp3 *.wma *.wav *.midi file on Win32 platforms
+Win32::MediaPlayer - Module for playing sound MP3 / WMA / WAV / MIDI file on Win32 platforms
 
 =head1 SYNOPSIS
 
@@ -153,7 +153,7 @@ Win32::MediaPlayer - Module for playing sound *.mp3 *.wma *.wav *.midi file on W
 
 =head1 DESCRIPTION
 
-This module allows playing of sound like *.mp3 *.wma *.wav *.midi on Win32 platforms using the MCI interface (which
+This module allows playing of sound format like MP3 / WMA / WAV / MIDI on Win32 platforms using the MCI interface (which
 depends on winmm.dll).
 
 =head1 REQUIREMENTS
@@ -172,6 +172,7 @@ type command:
 =head2 new
 
 The new method is the constructor. It will build a connection to the mci interface.
+
 $winmm = new Win32::MediaPlayer;  # new an object
 
 =head2 load()
@@ -209,7 +210,6 @@ Return the music total length
 
 $length = $winmm->length(1);      # Return the length in XX:XX format.
 
-
 $length = $winmm->length;         # Return the length in micro second integer.
 
 =head2 pos()
@@ -217,6 +217,7 @@ $length = $winmm->length;         # Return the length in micro second integer.
 Return the music now position
 
 $length = $winmm->pos(1);      # Return the Position in XX:XX format.
+
 $length = $winmm->pos;      # Return the Position in micro second integer.
 
 =head2 pause
@@ -227,9 +228,9 @@ $length = $winmm->pause;      # Pause the music play.
 
 =head2 resume
 
-resume the music play
+Resume the music play
 
-$length = $winmm->resume;      # Pause the music play.
+$length = $winmm->resume;      # Resume the music play.
 
 =head1 AUTHOR
 

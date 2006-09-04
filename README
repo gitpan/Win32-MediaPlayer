@@ -11,10 +11,13 @@ INSTALL
 
 To install this module you do the following:
 
+1.  Download and install the NMake Program from:  http://download.microsoft.com/download/vc15/patch/1.52/w95/en-us/nmake15.exe
+
+2.  Extract the ZIP file, and with console mode type command:
+
 perl Makefile.PL
-make
-make test
-make install
+nmake
+nmake install
 
 
 
