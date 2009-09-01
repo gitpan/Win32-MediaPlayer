@@ -5,8 +5,6 @@ type command:
 
 ppm install http://www.bribes.org/perl/ppm/Win32-API.ppd
 
-
-
 INSTALL
 
 To install this module you do the following:
@@ -19,15 +17,9 @@ perl Makefile.PL
 nmake
 nmake install
 
-
-
 AUTHOR
 
 Lilo Huang
-kenwu@cpan.org
-http://blog.yam.com/kenwu/
-
-
 
 COPYRIGHT
 

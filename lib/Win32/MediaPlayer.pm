@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use vars qw($VERSION $self $mciSendString $result);
 use Win32::API;
-$VERSION = '0.2';
+$VERSION = '0.3';
 
 BEGIN {
 $mciSendString = new Win32::API(
@@ -115,15 +115,15 @@ return $result;
 
 
 sub doMM {
-    my($cmd) = @_;
-    my $ret = "\0" x 1025;
-    my $rc = $mciSendString->Call($cmd, $ret, 1024, 0);
-    if($rc == 0) {
-        $ret =~ s/\0*$//;
-        return $ret;
-    } else {
-        return "error '$cmd': $rc";
-    }
+my($cmd) = @_;
+my $ret = "\0" x 1025;
+my $rc = $mciSendString->Call($cmd, $ret, 1024, 0);
+if($rc == 0) {
+$ret =~ s/\0*$//;
+return $ret;
+}else{
+return "error '$cmd': $rc";
+}
 }
 
 =pod
@@ -235,10 +235,6 @@ $length = $winmm->resume;      # Resume the music play.
 =head1 AUTHOR
 
 Lilo Huang
-
-kenwu@cpan.org
-
-http://blog.yam.com/kenwu/
 
 =head1 COPYRIGHT
 
